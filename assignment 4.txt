@@ -1,0 +1,181 @@
+#question:1#
+#What is File function in python? What is keywords to create and write file.
+-->> The file function is used to "create", "modify","read" and "find" the external files using python.
+    "open" keyword is functioning for create and write files with "w" attribute.
+
+
+
+#program:2#
+#Write a Python program to read an entire text file
+
+f=open('zarna.txt','r')
+l=f.readlines()
+for i in l:
+    print (i)
+f.close()
+
+#program:3#
+#Write a Python program to append text to a file and display the text
+ap = open("zarna.txt","a")
+ap.write("\nhello")
+ap.close()
+
+rd = open("text.txt","r")
+print(rd.read())
+
+#program:4#
+#Write a Python program to read first n lines of a file.
+file = open("zarna.txt","r")
+x = file.readlines()
+for i in range(5):
+    print(x[i], end="")
+file.close()
+
+#program:5#
+#Write a Python program to read last n lines of a file.
+file = open("zarna.txt","r")
+x = file.readlines()
+for i in range(-5,0):
+    print(x[i], end="")
+file.close()
+
+#program:6#
+#Write a Python program to read a file line by line and store it into a list
+
+file = open("zarna.txt","r")
+l = list()
+for line in file:
+    l.append(line)
+print(l)
+file.close()
+
+#program:7#
+#Write a Python program to read a file line by line store it into a variable. 
+file = open("zarna.txt","r")
+s = ''
+l = list()
+for line in file:
+    l.append(line)
+print("list l =\n",l)
+file.close()
+for i in range(len(l)):
+    s = s + l[i]
+print('\n\nString variable s =\n',s)
+
+
+#program:8#
+#Write a python program to find the longest words.
+file = open("zarna.txt","r")
+long = ''
+l = list()
+for line in file:
+    words = line.split()
+    for word in words:
+        if len(word) > len(long):
+            long = word
+print(f'"{long}" with lenght of :',len(long))
+        
+file.close()
+
+#program:9#
+#Write a Python program to count the number of lines in a text file. 
+
+file = open("zarna.txt","r")
+s = ''
+l = list()
+for line in file:
+    l.append(line)
+print("number of lines in file :",len(l))
+file.close()
+
+#program:10#
+#Write a Python program to count the frequency of words in a file. 
+file = open("zarna.txt","r")
+s = ''
+l = list()
+for line in file:
+    l.append(line)
+file.close()
+for i in range(len(l)):
+    s = s + l[i]
+l = s.split()
+d = dict()
+
+for word in l:
+    d[word] = d.get(word,0) + 1
+print(d)
+
+
+#program:11#
+#Write a Python program to write a list to a file. 
+
+l = ['android','python','java','c++','PHP']
+file = open("zarna.txt",'w')
+for i in l:
+    file.write('\n'+i)
+file.close()
+
+#program:12#
+#Write a Python program to copy the contents of a file to another file
+
+file1 = open("zarna.txt","r")
+x = file1.readlines()
+file2 = open("copy.txt","w")
+for i in range(-5,0):
+    file2.write(x[i])
+file1.close()
+file2.close()
+
+#question:13#
+#Explain Exception handling? What is an Error in Python?
+
+
+#question:14#
+#How many except statements can a try-except block have? Name Some built-in exception classes: 
+
+#question:15#
+#When will the else part of try-except-else be executed? 
+The else part is executed when no exception occurs
+
+#question:16#
+#Can one block of except statements handle multiple exception? 
+
+#question:17#
+#When is the finally block executed?
+
+#question:18#
+#What happens when „1‟== 1 is executed?
+It simply evaluates to False and does not raise any exception.
+
+#question:19#
+#How Do You Handle Exceptions With Try/Except/Finally In Python? Explain with coding snippets. 
+
+#program:20#
+#Write python program that user to enter only odd numbers, else will raise an exception. 
+
+#program:21#
+#What are oops concepts? Is multiple inheritance supported in java
+
+#quesaion:22#
+#How to Define a Class in Python? What Is Self? Give An Example Of A Python Class 
+
+#program:23#
+#Write a Python class named Rectangle constructed by a length and width and a method which will compute the area of a rectangle 
+
+#program:24#
+#Write a Python class named Circle constructed by a radius and two methods which will compute the area and the perimeter of a circle 
+
+#question:25#
+#Explain Inheritance in Python with an example? What is init? Or What Is A Constructor In Python? 
+
+#question:26#
+#What is Instantiation in terms of OOP terminology?
+
+#question:27#
+#What is used to check whether an object o is an instance of class A? 
+
+#question:28#
+#What relationship is appropriate for Course and Faculty? 
+
+#question:29#
+#What relationship is appropriate for Student and Person? 
